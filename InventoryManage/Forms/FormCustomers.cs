@@ -40,6 +40,7 @@ namespace InventoryManage.Forms
         {
             LoadTheme();
             populate();
+             
         }
         private void LoadTheme()
         {
@@ -54,20 +55,19 @@ namespace InventoryManage.Forms
                 }
             }
 
-            label1.ForeColor = ThemeColor.SecondaryColor;
-            label1.ForeColor = ThemeColor.PrimaryColor;
+
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void EditBtn_Click(object sender, EventArgs e)
         {
             try
             {
 
-                SqlCommand cmd = new SqlCommand("update CustomersTbl set Profile= '" + FbProfileTb.Text + "',FullName= '"+CustomersNameTb+"',PhoneNumber='"+CustomersPhoneTb+"' where Address='" + CustomersAddressTb.Text + "'", Con);
+                SqlCommand cmd = new SqlCommand("update CustomersTbl set FB_Profile= N'" + FbProfileTb.Text + "',Name= N'" + CustomersNameTb.Text + "',Address= N'" + CustomersAddressTb.Text + "' where Phone= N'" + CustomersPhoneTb.Text + "'", Con);
                 Con.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Customer Successfully Updated");
-                Con.Close() ;
+                Con.Close();
                 populate();
             }
             catch (Exception)
@@ -82,8 +82,8 @@ namespace InventoryManage.Forms
             try
             {
                 Con.Open();
-                SqlCommand cmd = new SqlCommand("insert into CustomersTbl values('" + FbProfileTb.Text + "','" + CustomersNameTb.Text + "','" + CustomersPhoneTb.Text + "','" + CustomersAddressTb.Text + "')", Con);
-           
+                SqlCommand cmd = new SqlCommand("insert into CustomersTbl values(N'" + FbProfileTb.Text + "',N'" + CustomersNameTb.Text + "',N'" + CustomersPhoneTb.Text + "',N'" + CustomersAddressTb.Text + "')", Con);
+
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Customer Successfully Added");
                 Con.Close();
@@ -102,6 +102,38 @@ namespace InventoryManage.Forms
             CustomersNameTb.Text = dataCustomersGV.SelectedRows[0].Cells[1].Value.ToString();
             CustomersPhoneTb.Text = dataCustomersGV.SelectedRows[0].Cells[2].Value.ToString();
             CustomersAddressTb.Text = dataCustomersGV.SelectedRows[0].Cells[3].Value.ToString();
+
+        }
+
+        private void removeBtn_Click(object sender, EventArgs e)
+        {
+            if (CustomersPhoneTb.Text == "")
+            {
+                MessageBox.Show("Pleace enter Customer Phone Number");
+            }
+            else
+            {
+                Con.Open();
+                string myQuery = "delete from CustomersTbl where Phone= '" + CustomersPhoneTb.Text + "'; ";
+                SqlCommand cmd = new SqlCommand(myQuery, Con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Customer successfuly deleted");
+                Con.Close();
+                populate();
+            }
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            FbProfileTb.Text = "";
+            CustomersNameTb.Text = "";
+            CustomersPhoneTb.Text = "";
+            CustomersAddressTb.Text = "";
+        }
+
+        private void FbProfileTb_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
