@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.stockBtn = new System.Windows.Forms.Button();
-            this.reportingBtn = new System.Windows.Forms.Button();
-            this.ordersBtn = new System.Windows.Forms.Button();
-            this.customersBtn = new System.Windows.Forms.Button();
-            this.btnProducts = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.lbLogo = new System.Windows.Forms.Label();
+            this.ordersBtn = new System.Windows.Forms.Button();
+            this.btnProducts = new System.Windows.Forms.Button();
+            this.reportingBtn = new System.Windows.Forms.Button();
+            this.customersBtn = new System.Windows.Forms.Button();
             this.panelTitleBar = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximize = new System.Windows.Forms.Button();
@@ -53,11 +53,11 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelMenu.Controls.Add(this.stockBtn);
-            this.panelMenu.Controls.Add(this.reportingBtn);
-            this.panelMenu.Controls.Add(this.ordersBtn);
-            this.panelMenu.Controls.Add(this.customersBtn);
-            this.panelMenu.Controls.Add(this.btnProducts);
             this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Controls.Add(this.ordersBtn);
+            this.panelMenu.Controls.Add(this.btnProducts);
+            this.panelMenu.Controls.Add(this.reportingBtn);
+            this.panelMenu.Controls.Add(this.customersBtn);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Margin = new System.Windows.Forms.Padding(2);
@@ -67,14 +67,13 @@
             // 
             // stockBtn
             // 
-            this.stockBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.stockBtn.FlatAppearance.BorderSize = 0;
             this.stockBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.stockBtn.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.stockBtn.ForeColor = System.Drawing.Color.Gainsboro;
             this.stockBtn.Image = ((System.Drawing.Image)(resources.GetObject("stockBtn.Image")));
             this.stockBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.stockBtn.Location = new System.Drawing.Point(0, 261);
+            this.stockBtn.Location = new System.Drawing.Point(2, 280);
             this.stockBtn.Margin = new System.Windows.Forms.Padding(2);
             this.stockBtn.Name = "stockBtn";
             this.stockBtn.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
@@ -84,86 +83,6 @@
             this.stockBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.stockBtn.UseVisualStyleBackColor = true;
             this.stockBtn.Click += new System.EventHandler(this.stockBtn_Click);
-            // 
-            // reportingBtn
-            // 
-            this.reportingBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.reportingBtn.FlatAppearance.BorderSize = 0;
-            this.reportingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.reportingBtn.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.reportingBtn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.reportingBtn.Image = ((System.Drawing.Image)(resources.GetObject("reportingBtn.Image")));
-            this.reportingBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.reportingBtn.Location = new System.Drawing.Point(0, 212);
-            this.reportingBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.reportingBtn.Name = "reportingBtn";
-            this.reportingBtn.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.reportingBtn.Size = new System.Drawing.Size(171, 49);
-            this.reportingBtn.TabIndex = 4;
-            this.reportingBtn.Text = "  Reporting";
-            this.reportingBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.reportingBtn.UseVisualStyleBackColor = true;
-            this.reportingBtn.Click += new System.EventHandler(this.reportingBtn_Click);
-            // 
-            // ordersBtn
-            // 
-            this.ordersBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ordersBtn.FlatAppearance.BorderSize = 0;
-            this.ordersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ordersBtn.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ordersBtn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.ordersBtn.Image = ((System.Drawing.Image)(resources.GetObject("ordersBtn.Image")));
-            this.ordersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ordersBtn.Location = new System.Drawing.Point(0, 163);
-            this.ordersBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.ordersBtn.Name = "ordersBtn";
-            this.ordersBtn.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.ordersBtn.Size = new System.Drawing.Size(171, 49);
-            this.ordersBtn.TabIndex = 3;
-            this.ordersBtn.Text = "  Orders";
-            this.ordersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ordersBtn.UseVisualStyleBackColor = true;
-            this.ordersBtn.Click += new System.EventHandler(this.ordersBtn_Click);
-            // 
-            // customersBtn
-            // 
-            this.customersBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.customersBtn.FlatAppearance.BorderSize = 0;
-            this.customersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customersBtn.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.customersBtn.ForeColor = System.Drawing.Color.Gainsboro;
-            this.customersBtn.Image = ((System.Drawing.Image)(resources.GetObject("customersBtn.Image")));
-            this.customersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customersBtn.Location = new System.Drawing.Point(0, 114);
-            this.customersBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.customersBtn.Name = "customersBtn";
-            this.customersBtn.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.customersBtn.Size = new System.Drawing.Size(171, 49);
-            this.customersBtn.TabIndex = 2;
-            this.customersBtn.Text = "  Customers";
-            this.customersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.customersBtn.UseVisualStyleBackColor = true;
-            this.customersBtn.Click += new System.EventHandler(this.customersBtn_Click);
-            // 
-            // btnProducts
-            // 
-            this.btnProducts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProducts.FlatAppearance.BorderSize = 0;
-            this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProducts.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnProducts.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnProducts.Image = ((System.Drawing.Image)(resources.GetObject("btnProducts.Image")));
-            this.btnProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducts.Location = new System.Drawing.Point(0, 65);
-            this.btnProducts.Margin = new System.Windows.Forms.Padding(2);
-            this.btnProducts.Name = "btnProducts";
-            this.btnProducts.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
-            this.btnProducts.Size = new System.Drawing.Size(171, 49);
-            this.btnProducts.TabIndex = 1;
-            this.btnProducts.Text = "  Products";
-            this.btnProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProducts.UseVisualStyleBackColor = true;
-            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
             // panelLogo
             // 
@@ -189,6 +108,82 @@
             this.lbLogo.TabIndex = 1;
             this.lbLogo.Text = "BoM";
             this.lbLogo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ordersBtn
+            // 
+            this.ordersBtn.FlatAppearance.BorderSize = 0;
+            this.ordersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ordersBtn.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ordersBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.ordersBtn.Image = ((System.Drawing.Image)(resources.GetObject("ordersBtn.Image")));
+            this.ordersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ordersBtn.Location = new System.Drawing.Point(2, 68);
+            this.ordersBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.ordersBtn.Name = "ordersBtn";
+            this.ordersBtn.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.ordersBtn.Size = new System.Drawing.Size(171, 49);
+            this.ordersBtn.TabIndex = 3;
+            this.ordersBtn.Text = "  Orders";
+            this.ordersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ordersBtn.UseVisualStyleBackColor = true;
+            this.ordersBtn.Click += new System.EventHandler(this.ordersBtn_Click);
+            // 
+            // btnProducts
+            // 
+            this.btnProducts.FlatAppearance.BorderSize = 0;
+            this.btnProducts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProducts.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnProducts.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnProducts.Image = ((System.Drawing.Image)(resources.GetObject("btnProducts.Image")));
+            this.btnProducts.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProducts.Location = new System.Drawing.Point(2, 174);
+            this.btnProducts.Margin = new System.Windows.Forms.Padding(2);
+            this.btnProducts.Name = "btnProducts";
+            this.btnProducts.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.btnProducts.Size = new System.Drawing.Size(171, 49);
+            this.btnProducts.TabIndex = 1;
+            this.btnProducts.Text = "  Products";
+            this.btnProducts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProducts.UseVisualStyleBackColor = true;
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
+            // 
+            // reportingBtn
+            // 
+            this.reportingBtn.FlatAppearance.BorderSize = 0;
+            this.reportingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reportingBtn.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.reportingBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.reportingBtn.Image = ((System.Drawing.Image)(resources.GetObject("reportingBtn.Image")));
+            this.reportingBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.reportingBtn.Location = new System.Drawing.Point(2, 227);
+            this.reportingBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.reportingBtn.Name = "reportingBtn";
+            this.reportingBtn.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.reportingBtn.Size = new System.Drawing.Size(171, 49);
+            this.reportingBtn.TabIndex = 4;
+            this.reportingBtn.Text = "  Reporting";
+            this.reportingBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.reportingBtn.UseVisualStyleBackColor = true;
+            this.reportingBtn.Click += new System.EventHandler(this.reportingBtn_Click);
+            // 
+            // customersBtn
+            // 
+            this.customersBtn.FlatAppearance.BorderSize = 0;
+            this.customersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customersBtn.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.customersBtn.ForeColor = System.Drawing.Color.Gainsboro;
+            this.customersBtn.Image = ((System.Drawing.Image)(resources.GetObject("customersBtn.Image")));
+            this.customersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.customersBtn.Location = new System.Drawing.Point(2, 121);
+            this.customersBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.customersBtn.Name = "customersBtn";
+            this.customersBtn.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.customersBtn.Size = new System.Drawing.Size(171, 49);
+            this.customersBtn.TabIndex = 2;
+            this.customersBtn.Text = "  Customers";
+            this.customersBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.customersBtn.UseVisualStyleBackColor = true;
+            this.customersBtn.Click += new System.EventHandler(this.customersBtn_Click);
             // 
             // panelTitleBar
             // 
